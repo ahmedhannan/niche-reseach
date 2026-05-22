@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --paper: #f4f1e8;
+  --ink: #1a1a17;
+  --line: #d8d2bf;
+  --green: #2f7d4f;
+  --green-bg: #e3efe4;
+  --amber: #b87a14;
+  --amber-bg: #f6ecd2;
+  --red: #b23b3b;
+  --red-bg: #f3dede;
+  --accent: #1a1a17;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+body {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.04) 1px, transparent 0);
+  background-size: 22px 22px;
+}
+
+.font-display {
+  font-family: "Spectral", Georgia, serif;
+}
+.font-mono {
+  font-family: "JetBrains Mono", "Courier New", monospace;
+}
+
+::selection {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-rise {
+  animation: rise 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
